@@ -31,7 +31,7 @@ FROM debian:13-slim
 
 # === INSTALACIÓN DE PAQUETES ===
 # Cada RUN es una capa nueva → imagen más grande, cache ineficiente
-RUN apt-get update && apt-get install -y openssl && apt-get install -y netcat-traditional && && rm -rf /var/lib/apt/lists/*
+RUN apt-get update && apt-get install -y openssl && apt-get install -y netcat-traditional && rm -rf /var/lib/apt/lists/*
 # Se han quitado estos paquetes inseguros (curl, wget) ya no pasan el escaneo de Trivy (CVE's críticas)
 # RUN apt-get install -y curl
 # RUN apt-get install -y wget
